@@ -1,0 +1,167 @@
+/* Variabler */
+:root {
+    --primary-color: #0B2303;
+    --secondary-color:  #6F826D;
+    --background-color: #f6f3ec;
+    --surface-color: #eae2d6;
+
+    --text-color: #2b2b2b;
+    --text-on-primary: #eae2d6;
+}
+/* Grundregler */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Rubriker */ 
+h1 {
+    font-weight: 500;
+    font-family: 'Marcellus', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+}
+
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-family: Caveat, Patrick Hand;
+
+}
+
+.header-top img {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+header nav a {
+    display: block; 
+    padding: 0.8rem 0 0.8rem 4rem;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    border-top: 1px solid var(--secondary-color);
+
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding-bottom: 2rem;
+    
+
+}
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Main */ 
+
+section {
+    border-bottom: 1px solid var(--surface-color);
+    text-align: center;
+    padding-bottom: 2rem;
+
+}
+
+article {
+    background-color: var(--surface-color);
+    margin: 2rem;
+    padding: 1rem;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    padding: 0 1rem 0;
+}
+
+/* Footer*/
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-on-primary);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    font-family: 'Marcellus', serif;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.accent-text {
+    font-style: italic;
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+
+footer ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.footer-info {
+    display: flex;
+    gap: 5rem;
+}
+
+footer section {
+    border: none;
+}

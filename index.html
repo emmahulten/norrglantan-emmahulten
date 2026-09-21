@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Norrgläntan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower:wght@400&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <!--Sidhuvud-->
     <header>
-        <img src="images/logotyp_vit.png" alt="Norrgläntan logotyp">
-        <h1>NORRGLÄNTAN</h1>
+        <div class="header-top">
+            <img src="images/logotyp_vit.png" alt="Norrgläntan logotyp">
+            <h1>NORRGLÄNTAN</h1>
+        </div>
 
         <!--Meny med osorterad lista-->
         <nav>
@@ -47,27 +52,31 @@
         <section>
             <h2>Upplev Norrgläntan</h2>
 
-            <article>
-                <img src="images/vandra.jpg" alt="Vandringsled genom solbelyst barrskog">
-                <h3>Vandra</h3>
-                <p>Följ leder genom skog och över öppna höjder. Här finns vandringar för både korta utflykter och längre
-                    dagar
-                    ute i naturen.</p>
-            </article>
-            <article>
-                <img src="images/paddla.jpg" alt="Person paddlar kajak på en sjö i solnedgång">
-                <h3>Paddla</h3>
-                <p>Ta dig ut på Norrgläntans sjöar och upptäck landskapet från vattnet. Hitta din egen vik eller stanna
-                    till vid någon
-                    av rastplatserna längs stranden.</p>
-            </article>
-            <article>
-                <img src="images/upptack.jpg" alt="Person blickar ut över skog och slingrande älv i solnedgång">
-                <h3>Upptäck</h3>'
-                <p>Ibland är det bästa äventyret det som inte är planerat. Utforska skogar och utsiktsplatser och
-                    upptäck dina egna
-                    favoriter längs vägen.</p>
-            </article>
+            <div class="activity-grid">
+                <article>
+                    <img src="images/vandra.jpg" alt="Vandringsled genom solbelyst barrskog">
+                    <h3>Vandra</h3>
+                    <p>Följ leder genom skog och över öppna höjder. Här finns vandringar för både korta utflykter och
+                        längre
+                        dagar
+                        ute i naturen.</p>
+                </article>
+                <article>
+                    <img src="images/paddla.jpg" alt="Person paddlar kajak på en sjö i solnedgång">
+                    <h3>Paddla</h3>
+                    <p>Ta dig ut på Norrgläntans sjöar och upptäck landskapet från vattnet. Hitta din egen vik eller
+                        stanna
+                        till vid någon
+                        av rastplatserna längs stranden.</p>
+                </article>
+                <article>
+                    <img src="images/upptack.jpg" alt="Person blickar ut över skog och slingrande älv i solnedgång">
+                    <h3>Upptäck</h3>
+                    <p>Ibland är det bästa äventyret det som inte är planerat. Utforska skogar och utsiktsplatser och
+                        upptäck dina egna
+                        favoriter längs vägen.</p>
+                </article>
+            </div>
         </section>
 
         <section>
@@ -83,7 +92,7 @@
     <footer>
         <img src="images/logotyp_vit.png" alt="Norrgläntan logotyp">
         <p class="footer-brand">NORRGLÄNTAN</p>
-        <p>Naturupplevelser året runt.</p>
+        <p class="accent-text">Naturupplevelser året runt.</p>
 
         <div class="footer-info">
             <section>
@@ -94,14 +103,14 @@
                 </ul>
             </section>
             <nav>
-            <h2>Länkar</h2>
-            <ul>
-                <li><a href="#">Upptäck</a></li>
-                <li><a href="#">Aktiviteter</a></li>
-                <li><a href="#">Boende</a></li>
-                <li><a href="#">Hitta hit</a></li>
-            </ul>
-        </nav>
+                <h2>Länkar</h2>
+                <ul>
+                    <li><a href="#">Upptäck</a></li>
+                    <li><a href="#">Aktiviteter</a></li>
+                    <li><a href="#">Boende</a></li>
+                    <li><a href="#">Hitta hit</a></li>
+                </ul>
+            </nav>
         </div>
 
     </footer>
