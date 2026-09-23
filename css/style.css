@@ -1,13 +1,14 @@
 /* Variabler */
 :root {
     --primary-color: #0B2303;
-    --secondary-color:  #6F826D;
+    --secondary-color: #6F826D;
     --background-color: #f6f3ec;
     --surface-color: #eae2d6;
 
     --text-color: #2b2b2b;
     --text-on-primary: #eae2d6;
 }
+
 /* Grundregler */
 * {
     box-sizing: border-box;
@@ -17,7 +18,7 @@ body {
     margin: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 a {
@@ -38,12 +39,21 @@ a {
     background-color: var(--secondary-color);
 }
 
-/* Rubriker */ 
+p {
+    padding: 0 1.2rem;
+}
+
+/* Rubriker */
 h1 {
     font-weight: 500;
     font-family: 'Marcellus', serif;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     letter-spacing: 0.08em;
+}
+
+h2 {
+    font-family: 'Arial Nova', sans-serif;
+    font-size: 2rem;
 }
 
 /* Header */
@@ -57,7 +67,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .header-top img {
@@ -67,9 +77,15 @@ header {
 }
 
 header nav a {
-    display: block; 
+    display: block;
     padding: 0.8rem 0 0.8rem 4rem;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 header nav ul {
@@ -87,16 +103,13 @@ header nav li {
 .hero {
     text-align: center;
     padding-bottom: 2rem;
-    
-
 }
+
 .hero img {
     width: 100%;
-    height: auto;
 }
 
-/* Main */ 
-
+/* Sektioner*/
 section {
     border-bottom: 1px solid var(--surface-color);
     text-align: center;
@@ -104,10 +117,22 @@ section {
 
 }
 
-article {
+/* Aktiviteter*/
+.activities {
     background-color: var(--surface-color);
+    padding-top: 1rem;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+article {
+    background-color: var(--background-color);
     margin: 2rem;
-    padding: 1rem;
+    padding-bottom: 1rem;
 }
 
 article img {
@@ -115,12 +140,8 @@ article img {
     height: auto;
 }
 
-p {
-    padding: 0 1rem 0;
-}
 
 /* Footer*/
-
 footer {
     background-color: var(--primary-color);
     color: var(--text-on-primary);
@@ -133,24 +154,34 @@ footer img {
     height: auto;
     display: block;
     margin: 0 auto;
+    padding-bottom: 1rem;
 }
 
 .footer-brand {
+    font-weight: 500;
     font-family: 'Marcellus', serif;
-    font-size: 2rem;
-    margin-bottom: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
 }
 
 .accent-text {
     font-style: italic;
     font-family: 'Indie Flower', sans-serif;
-    font-size: 1.5rem;
-    margin-top: 0;
+    font-size: 1.2rem;
 }
 
+.footer-brand,
+.accent-text {
+    margin: 0;
+    padding: 0;
+}
+
+footer h2 {
+    font-size: 1.1em;
+}
 
 footer ul {
-    list-style: none; 
+    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -158,8 +189,115 @@ footer ul {
 .footer-info {
     display: flex;
     gap: 5rem;
+    margin-top: 1.5rem;
 }
 
 footer section {
     border: none;
+}
+
+
+
+/* Desktop */
+@media (min-width: 768px) {
+
+    /* Header*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6rem;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+
+    header nav ul li {
+        border-top: none;
+    }
+
+    /* Hero */
+    .hero {
+        position: relative;
+        border: none;
+    }
+
+    .hero img {
+        max-height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hero-text p {
+        padding: 0;
+    }
+
+    .hero-text {
+        position: absolute;
+        text-align: left;
+        max-width: 20rem;
+        top: 20%;
+        left: 10%;
+        color: var(--text-on-primary);
+    }
+
+    .hero-text h2 span {
+        display: block;
+        font-size: 0.7em;
+    }
+
+    /* Sektioner */
+
+    .intro {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    .action {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 8rem;
+    }
+
+    .action-text {
+        max-width: 40rem;
+        text-align: left;
+    }
+
+    .action-text p {
+        padding: 0;
+    }
+
+    /* Aktiviteter */
+    .activity-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 0 8rem;
+    }
+
+    /* Footer */
+
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .footer-brand-block {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-brand-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer img {
+        width: 100px;
+    }
 }
